@@ -18,12 +18,6 @@ jobs:
           versionSpec: '10.x'
           displayName: 'Install Node.js'
 
-      # Install Node dependencies
-      # TODO How to cache ~/.npm and ~/.cache folders?
-      # https://github.com/cypress-io/cypress-example-kitchensink/issues/132
-      - script: npm ci
-        displayName: 'Install NPM dependencies'
-
       - script: npm run cy:verify
         displayName: 'Cypress verify'
 
